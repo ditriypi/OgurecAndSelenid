@@ -1,6 +1,8 @@
-package User;
+package Hook;
 
+import User.UserMethod;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 
 
 public class UserStep {
@@ -23,4 +25,7 @@ public class UserStep {
     public void iSendPhoneNumberInFieldPhone(String phone) {
         UserMethod.setPhoneInField(phone);
     }
-}
+
+
+    }
+

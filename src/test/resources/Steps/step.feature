@@ -2,19 +2,21 @@ Feature: Ordering product and find him in basket
 
 
   Scenario:   Add product to basket
-    Given I open the main page
-    When I send 'ноутбук' in search field
-    And I Click on find button
-    And I  choose  'Acer Aspire' model
-   And I  click button Buy
-    Then I going in basket and see chosen  product
+     Given I open the main page
+     When I send 'ноутбук' in search field
+     And I Click on find button
+     And I  choose  'Acer Aspire' model
+     And I  click button Buy
+     Then I going in basket and see chosen  product
 
+    Scenario: add some info
+      Given I open the main page
 
    Scenario Outline: Buy product for cash
 
       Given I open the main page
       When  I send 'playstation 4' in search field
-     And I Click on find button
+      And I Click on find button
       And I choose 'геймпад'
       And I  click button Buy
       And I   click  checkout
