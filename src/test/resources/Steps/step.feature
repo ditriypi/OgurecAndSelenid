@@ -9,8 +9,6 @@ Feature: Ordering product and find him in basket
      And I  click button Buy
      Then I going in basket and see chosen  product
 
-    Scenario: add some info
-      Given I open the main page
 
    Scenario Outline: Buy product for cash
 

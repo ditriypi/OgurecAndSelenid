@@ -1,15 +1,24 @@
 package Hook;
 
 import MethodForStep.OrderingMethod;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
 
 import static BaseLocator.BaseLocator.ButtonField;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class OrderingStep {
 OrderingMethod method = new OrderingMethod();
+@After
+public void tearDown(){
+    WebDriver driver = getWebDriver();
+    driver.close();
+}
 
 
     @Given("I open the main page")
